@@ -1,0 +1,10 @@
+.nav li:hover{
+  background-color: rgba(0,0,0,0.3);
+}
+
+.invert-color{
+  filter: invert(1);
+  -ms-filter: invert(1);
+  -moz-filter: invert(1);
+  -webkit-filter: invert(1);
+}

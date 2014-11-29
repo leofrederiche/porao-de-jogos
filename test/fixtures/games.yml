@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  developer: MyString
+  year: 1
+  history: MyString
+  gender: MyString
+  accept: false
+  avaliable: MyString
+
+two:
+  name: MyString
+  developer: MyString
+  year: 1
+  history: MyString
+  gender: MyString
+  accept: false
+  avaliable: MyString

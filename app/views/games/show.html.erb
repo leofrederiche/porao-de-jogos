@@ -1,0 +1,23 @@
+<h1><%= @game.name %></h1>
+
+<p><%= image_tag @game.game_picture.url %></p>
+
+<p><b>História: </b>
+  <%= @game.history %>
+</p>
+
+<p><b>Desenvolvedora:</b>
+  <%= @game.developer %>
+</p>
+
+<p><b>Ano de lançamento: </b>
+  <%= @game.year %>
+</p>
+
+<p><b>Gênero: </b>
+  <%= @game.gender %>
+</p>
+
+<p><b>Disponivel para: </b>
+  <%= @game.avaliable %>
+</p>

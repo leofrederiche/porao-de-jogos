@@ -1,0 +1,42 @@
+<%= stylesheet_link_tag 'form', media: 'all', 'data-turbolinks-track' => true %>
+
+<div class="container" style="margin-top: 60px; ">
+<h1>Novo Jogo</h1>
+
+<div class="panel panel-default well">
+  <div class="panel-body">
+
+    <%= form_for @new_game, url: new_game_path do |game| %>
+      <label for="inputPassword3" class="col-sm-2 control-label">Imagen do jogo</label>
+      <small>selecione uma imagen pra aprensentar o jogo</small>
+      <%= game.file_field :game_picture, class: "form-control" %><br>
+
+      <label for="inputPassword3" class="col-sm-2 control-label">Nome do jogo</label>
+      <small>não utilize abreviações</small>
+      <p><%= game.text_field :name, class: "form-control" %></p>
+
+      <label for="inputPassword3" class="col-sm-2 control-label">Desenvolvedora</label>
+      <small>Empresa ou pessoa que desenvolveu o game</small>
+      <p><%= game.text_field :developer, class: "form-control" %></p>
+
+      <label for="inputPassword3" class="col-sm-2 control-label">Ano de lançamento</label>
+      <p><%= game.text_field :year, class: "form-control" %></p>
+
+      <label for="inputPassword3" class="col-sm-2 control-label">História do jogo</label>
+      <small>conte a história do jogo com meros detalhes</small>
+      <p><%= game.text_area :history, class: "form-control" %></p>
+
+      <label for="inputPassword3" class="col-sm-2 control-label">Gênero</label>
+      <small>ex: FPS, RPG, Aventura</small>
+      <p><%= game.text_field :gender, class: "form-control" %></p>
+
+      <label for="inputPassword3" class="col-sm-2 control-label">Disponibilidade</label>
+      <small>ex: PS3, PC, Xbox 360</small>
+      <p><%= game.text_field :avaliable, class: "form-control" %></p>
+
+      <p><%= game.submit "Cadastrar game", class: "btn btn-default" %></p>
+    <% end %>
+
+  </div>
+</div>
+</div>
