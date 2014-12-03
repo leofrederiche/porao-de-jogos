@@ -1,23 +1,31 @@
-<h1><%= @game.name %></h1>
+<div class="container bg-show-game" style="margin-top: 70px;">
 
-<p><%= image_tag @game.game_picture.url %></p>
+<h1 class=""><%= @game.name %> <span class="label label-primary"><%= @game.gender %></span></h1>
 
-<p><b>História: </b>
-  <%= @game.history %>
-</p>
+<p style="postion: relative; text-align: center; margin-right: 20px;" >
 
-<p><b>Desenvolvedora:</b>
-  <%= @game.developer %>
-</p>
+<div class="jumbotron row" style="text-align:center; margin-top: 30px;">
 
-<p><b>Ano de lançamento: </b>
-  <%= @game.year %>
-</p>
+  <div class="col-xs-12 col-ms-4 col-md-4">
+    <%= image_tag @game.game_picture.url(:medium), style: "" %></p>
+  </div>
 
-<p><b>Gênero: </b>
-  <%= @game.gender %>
-</p>
+  <div class="col-xs-12 col-ms-8 col-md-8">
+    <p><%= @game.history %></p>
+  </div>
+</div>
 
-<p><b>Disponivel para: </b>
-  <%= @game.avaliable %>
-</p>
+<div class="row">
+  <p class="well col-ms-3 "><b>Desenvolvedora:</b>
+    <%= @game.developer %>
+  </p>
+
+  <p class="well col-ms-3"><b>Ano de lançamento: </b>
+    <%= @game.year %>
+  </p>
+
+  <p class="well col-ms-3"><b>Disponivel para: </b>
+    <%= @game.avaliable %>
+  </p>
+</div>
+</div>
