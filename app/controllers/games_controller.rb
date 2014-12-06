@@ -2,6 +2,7 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
+    @search_game = Game.where("name LIKE '%#{params[:search]}%'") if params[:search]
   end
 
   def new
@@ -21,7 +22,6 @@ class GamesController < ApplicationController
   def show
     @game = Game.find_by_name(params[:name])
   end
-
 
   private
   def games_params

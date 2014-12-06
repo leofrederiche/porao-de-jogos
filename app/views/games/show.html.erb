@@ -1,31 +1,37 @@
 <div class="container bg-show-game" style="margin-top: 70px;">
 
-<h1 class=""><%= @game.name %> <span class="label label-primary"><%= @game.gender %></span></h1>
+<h1 class="well"><%= @game.name %> <span class="label label-primary"><%= @game.gender %></span></h1>
 
 <p style="postion: relative; text-align: center; margin-right: 20px;" >
 
-<div class="jumbotron row" style="text-align:center; margin-top: 30px;">
+<div class="row" style="text-align:center; margin: 30px;">
 
-  <div class="col-xs-12 col-ms-4 col-md-4">
+  <div class=" col-xs-12 col-ms-6 col-md-6">
     <%= image_tag @game.game_picture.url(:medium), style: "" %></p>
   </div>
 
-  <div class="col-xs-12 col-ms-8 col-md-8">
-    <p><%= @game.history %></p>
+  <div class=" col-xs-12 col-ms-6 col-md-6">
+    <p>
+      <%= @game.history %>
+    </p>
   </div>
 </div>
 
 <div class="row">
-  <p class="well col-ms-3 "><b>Desenvolvedora:</b>
+  <p class="well col-ms-4 col-xs-12 col-md-3"><b>Desenvolvedora:</b>
     <%= @game.developer %>
   </p>
 
-  <p class="well col-ms-3"><b>Ano de lançamento: </b>
+  <p class="well col-ms-4 col-xs-12 col-md-3"><b>Ano de lançamento: </b>
     <%= @game.year %>
   </p>
 
-  <p class="well col-ms-3"><b>Disponivel para: </b>
+  <p class="well col-ms-4 col-xs-12 col-md-3"><b>Disponivel para: </b>
     <%= @game.avaliable %>
+  </p>
+
+  <p class="well col-ms-4 col-xs-12 col-md-3"><b>Foi aceito?  </b>
+    <%= "Em avaliação" if @game.accept == nil %>
   </p>
 </div>
 </div>

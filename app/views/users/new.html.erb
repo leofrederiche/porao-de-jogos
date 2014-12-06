@@ -1,1 +1,29 @@
-<h1>Novo usuario</h1>
+<div class="container" style="margin-top: 50px;">
+  <h1>Novo usuario</h1>
+
+
+  <div class="panel panel-default well">
+  <div class="panel-body">
+
+    <%= form_for @new_user, url: new_user_path do |user| %>
+
+      <label for="inputPassword3" class="col-sm-2 control-label">Nome</label>
+      <p><%= user.text_field :name, class: "form-control" %></p>
+
+      <label for="inputPassword3" class="col-sm-2 control-label">E-mail</label>
+      <p><%= user.text_field :email, class: "form-control" %></p>
+
+      <label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
+      <p><%= user.password_field :password, class: "form-control" %></p>
+
+      <label for="inputPassword3" class="col-sm-2 control-label">Confirmar senha</label>
+      <p><%= user.password_field :password_confirmation, class: "form-control" %></p>
+      
+      <p><%= user.submit "Cadastrar ususario", class: "btn btn-default" %></p>
+    <% end %>
+
+  </div>
+</div>
+
+
+</div>

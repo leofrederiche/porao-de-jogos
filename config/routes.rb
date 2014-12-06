@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post "/games/new", to: "games#create", as: false
   get "/games/show/:name", to: "games#show", as: :show_game
 
-  get "/users/new", to: "users#new", as: :user_new
+  get "/users/new", to: "users#new", as: :new_user
+  post "/users/new", to: "users#create", as: false
 
 end
