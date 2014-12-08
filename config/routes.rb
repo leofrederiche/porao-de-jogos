@@ -9,5 +9,10 @@ Rails.application.routes.draw do
 
   get "/users/new", to: "users#new", as: :new_user
   post "/users/new", to: "users#create", as: false
+  get "/user/games/:name", to: "users#games", as: :show_user
+
+  get "/login/new", to: "login#new", as: :new_login
+  post "/login/new", to: "login#create", as: false
+  get "/login/destroy", to: "login#destroy", as: :destroy_login
 
 end

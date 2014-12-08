@@ -20,6 +20,11 @@ class UsersController < ApplicationController
 
   end
 
+  def games
+    @user = User.find_by_name(params[:name])
+    @games = @user.games
+  end
+
   private
   def user_params
     params.require(:user).permit(
