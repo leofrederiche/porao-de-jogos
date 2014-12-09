@@ -7,5 +7,5 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :email
 
-  has_many :games, class_name: MyGames, foreign_key: :id_user
+  has_many :games, class_name: Review, foreign_key: :id_user
 end

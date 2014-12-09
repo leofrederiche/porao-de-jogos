@@ -8,4 +8,10 @@ module ApplicationHelper
     end
   end
 
+  def show_new_review
+    if current_user
+      render "review"
+    end
+  end
+
 end

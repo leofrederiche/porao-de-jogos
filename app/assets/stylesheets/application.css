@@ -1,5 +1,5 @@
 .well{
-  border-color: black !important;
+  border-color: rgba(0,0,0,0.4) !important;
 }
 
 .nav li:hover{

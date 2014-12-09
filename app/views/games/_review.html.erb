@@ -1,0 +1,9 @@
+<%= form_for @review, url: show_game_path(@game.name) do |review| %>
+  <%= review.label :note, "Nota" %> <small>de 1 a 5</small>
+  <%= review.number_field :note, in: 1..5, value: "1", style: "text-align: center;" %><br>
+
+  <%= review.label :review, "Deixe sua opinião" %><br>
+  <%= review.text_area :review, class: "text_area" %>
+
+  <%= review.submit "Enviar review", class: "btn btn-primary" %>
+<% end %>

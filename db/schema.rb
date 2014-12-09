@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20141208011652) do
     t.datetime "game_picture_updated_at"
   end
 
-  create_table "my_games", force: true do |t|
+  create_table "reviews", force: true do |t|
     t.integer  "id_user"
     t.integer  "id_game"
     t.string   "review"

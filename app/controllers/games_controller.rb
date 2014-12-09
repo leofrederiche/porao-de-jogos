@@ -21,6 +21,10 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find_by_name(params[:name])
+    @review = Review.new
+    @reviews = @game.reviews
+
+    @value = 0
   end
 
   private

@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   post "/login/new", to: "login#create", as: false
   get "/login/destroy", to: "login#destroy", as: :destroy_login
 
+  post "/games/show/:name", to: "review#create", as: false
+
 end

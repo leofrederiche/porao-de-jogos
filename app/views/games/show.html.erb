@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag 'form', media: 'all', 'data-turbolinks-track' => true %>
+
 <div class="container bg-show-game" style="margin-top: 70px;">
 
 <h1 class="well"><%= @game.name %> <span class="label label-primary"><%= @game.gender %></span></h1>
@@ -33,6 +35,29 @@
   <p class="well col-ms-4 col-xs-12 col-md-3"><b>Foi aceito?  </b>
     <%= "Em avaliação" if @game.accept == nil %>
   </p>
+
+  <p class="well col-ms-4 col-xs-12 col-md-3"><b>Pontuação: </b>
+
+    <% @reviews.each do |review| %>
+      <% @value = review.note + @value %>
+    <% end %>
+    <%= @value %>
+  </p>
+</div>
+
+<div class="panel well" style="padding: 30px; text-align: center;">
+  <h3>Avaliações</h3>
+  <%= show_new_review %>
+
+
+  <% @reviews.reverse.each do |review| %>
+      <div class="review">
+        <b><%= User.find_by_id(review.id_user).name %>
+        <small>Nota: <%= review.note %></small></b><br>
+        <%= review.review %>
+      </div>
+  <% end %> 
+  
 </div>
 
 </div>
