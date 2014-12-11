@@ -14,4 +14,15 @@ module ApplicationHelper
     end
   end
 
+  def card_rank(rank)
+    case rank
+      when 0
+        "gold"
+      when 1
+        "silver"
+      when 2
+        "bronze"
+      end
+  end
+
 end

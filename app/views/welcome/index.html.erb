@@ -8,76 +8,29 @@
 <div class="container" >
 
   <h2>Tudo sobre seu jogos preferidos <span class="label label-info">New</span></h2>
-  <h5>Jogos mais votados</h5>
+  <h5>Recen adicionados</h5>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-md-6">
+    <% @show_games = 0 %>
+    <% @games.reverse.each do |game| %>
+      <% if @show_games <= 6 %>
 
-      <div class="well">
-        <a class="media-left" href="#">
-          <%= image_tag "logo.png", style: "width: 64px; height: 64px;" %>
-        </a>
-        <div class="media-body">
-          <h4 class="media-heading">Far cry 4</h4>
-          Divirta-se explorando o gigantesco mundo de Kiraty.
+        <div class=" col-xs-12 col-sm-6 col-md-6"> 
+          <div class="well"> 
+          <a class="media-left" href="#" style="margin: 40px;">
+            <%= image_tag game.game_picture.url(:medium), style: "width: 64px; height: 64px;" %></p>
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading"><%= game.name %> <small><%= game.gender %></small></h4>
+            
+          </div>
+          </div>
         </div>
-      </div>
 
-      <div class="well">
-        <a class="media-left" href="#">
-          <%= image_tag "logo.png", style: "width: 64px; height: 64px;" %>
-        </a>
-        <div class="media-body">
-          <h4 class="media-heading">Far cry 4</h4>
-          Divirta-se explorando o gigantesco mundo de Kiraty.
-        </div>
-      </div>
+      <% end %>
 
-      <div class="well">
-        <a class="media-left" href="#">
-          <%= image_tag "logo.png", style: "width: 64px; height: 64px;" %>
-        </a>
-        <div class="media-body">
-          <h4 class="media-heading">Far cry 4</h4>
-          Divirta-se explorando o gigantesco mundo de Kiraty.
-        </div>
-      </div>
+    <% end %>
 
-    </div>
-
-    <div class="col-xs-12 col-sm-6 col-md-6">
-      
-      <div class="well">
-        <a class="media-left" href="#">
-          <%= image_tag "logo.png", style: "width: 64px; height: 64px;" %>
-        </a>
-        <div class="media-body">
-          <h4 class="media-heading">Far cry 4</h4>
-          Divirta-se explorando o gigantesco mundo de Kiraty.
-        </div>
-      </div>
-
-      <div class="well">
-        <a class="media-left" href="#">
-          <%= image_tag "logo.png", style: "width: 64px; height: 64px;" %>
-        </a>
-        <div class="media-body">
-          <h4 class="media-heading">Far cry 4</h4>
-          Divirta-se explorando o gigantesco mundo de Kiraty.
-        </div>
-      </div>
-
-      <div class="well">
-        <a class="media-left" href="#">
-          <%= image_tag "logo.png", style: "width: 64px; height: 64px;" %>
-        </a>
-        <div class="media-body">
-          <h4 class="media-heading">Far cry 4</h4>
-          Divirta-se explorando o gigantesco mundo de Kiraty.
-        </div>
-      </div>
-
-    </div>
   </div>
 
 

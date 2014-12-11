@@ -9,7 +9,7 @@
 <div class="row" style="text-align:center; margin: 30px;">
 
   <div class=" col-xs-12 col-ms-6 col-md-6">
-    <%= image_tag @game.game_picture.url(:medium), style: "" %></p>
+    <%= image_tag @game.game_picture.url(:medium) %></p>
   </div>
 
   <div class=" col-xs-12 col-ms-6 col-md-6">
@@ -20,28 +20,29 @@
 </div>
 
 <div class="row">
-  <p class="well col-ms-4 col-xs-12 col-md-3"><b>Desenvolvedora:</b>
+  <p class="col-xs-12 well col-ms-6 col-md-4"><b>Desenvolvedora:</b>
     <%= @game.developer %>
   </p>
 
-  <p class="well col-ms-4 col-xs-12 col-md-3"><b>Ano de lançamento: </b>
+  <p class="col-xs-12 well col-ms-6 col-md-4"><b>Ano de lançamento: </b>
     <%= @game.year %>
   </p>
 
-  <p class="well col-ms-4 col-xs-12 col-md-3"><b>Disponivel para: </b>
+  <p class="col-xs-12 well col-ms-6 col-md-4"><b>Disponivel para: </b>
     <%= @game.avaliable %>
   </p>
 
-  <p class="well col-ms-4 col-xs-12 col-md-3"><b>Foi aceito?  </b>
+  <p class="col-xs-12 well col-ms-6 col-md-4"><b>Foi aceito?  </b>
     <%= "Em avaliação" if @game.accept == nil %>
   </p>
 
-  <p class="well col-ms-4 col-xs-12 col-md-3"><b>Pontuação: </b>
+  <p class="col-xs-12 well col-ms-6 col-md-4"><b>Pontuação: </b>
 
     <% @reviews.each do |review| %>
-      <% @value = review.note + @value %>
+      <% $value = review.note + $value %>
     <% end %>
-    <%= @value %>
+    <%= $value %>
+    <% $score_games["#{@game.name}"] = $value %>
   </p>
 </div>
 

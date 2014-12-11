@@ -1,0 +1,28 @@
+<span style="font-size: 400%; float: right; margin-right: 20px;">Top 20</span>
+<h1 class="well" style="width: 100%; border-radius: 0px; margin-top: 70px;">
+  Ranking de jogos
+</h1>
+
+<div class="container">
+
+
+  <div class="row" style="text-align: center; margin-top: 50px;">
+
+    <% @games.each_with_index do |game,index| %>
+      
+      <div class="col-xs-12 col-sm-6 col-md-3" style="margin: -1px;" >
+        <div class="thumbnail well game-card <%= card_rank(index) %>">
+          <%= image_tag game.game_picture.url, style: "width: 240px; height: 200px;" %>
+          <div class="caption">
+            <h3><%= game.name %></h3>
+            <p><%= game.description %></p>
+            <p><%= link_to "Saiba mais...", show_game_path(game.name), class: "btn btn-primary" %></p>
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>

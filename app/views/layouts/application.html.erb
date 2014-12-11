@@ -30,8 +30,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><%= link_to "Lista de jogos", games_path %></li>
-        <li><a href="#">Ranking</a></li>
-        <li><a href="#">Ultimos jogos</a></li>
+        <li><%= link_to "Ranking", ranking_path %></li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <%= render "layouts/search" if request.url.to_s == "http://localhost:3000/games" %>

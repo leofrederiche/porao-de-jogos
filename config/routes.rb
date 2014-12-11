@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/games/new", to: "games#new", as: :new_game
   post "/games/new", to: "games#create", as: false
   get "/games/show/:name", to: "games#show", as: :show_game
+  get "/games/ranking", to: "games#ranking", as: :ranking
 
   get "/users/new", to: "users#new", as: :new_user
   post "/users/new", to: "users#create", as: false
