@@ -1,8 +1,7 @@
 class Game < ActiveRecord::Base
 
   validates_uniqueness_of :name, :history
-  validates_presence_of :name, :history, :gender
-  validates_presence_of :game_picture
+  validates_presence_of :name, :history, :gender, :game_picture
 
   has_many :reviews, class_name: Review, foreign_key: :id_game
 
@@ -13,7 +12,7 @@ class Game < ActiveRecord::Base
     reviews.inject(0) {|sum, review| sum + review[:note]}
   end 
 
-  def description
+  def info
     # "criado por: #{developer}"
     "#{developer} - #{gender} - #{score} pontos"
     
