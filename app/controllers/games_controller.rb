@@ -16,9 +16,9 @@ class GamesController < ApplicationController
   def create
     @new_game = Game.create(games_params)
 
-
     if @new_game.save 
       redirect_to games_path
+      $score_games ||= Hash.new
       $score_games["#{@new_game.name}"] = 0
     else
       render :new
@@ -44,7 +44,15 @@ class GamesController < ApplicationController
       :gender,
       :accept,
       :avaliable,
-      :game_picture
+      :game_picture,
+      :classication,
+      :description,
+      :multiplayer,
+      :coop,
+      :campaign,
+      :legend,
+      :dubbing,
+      :requirements
     )
   end
 

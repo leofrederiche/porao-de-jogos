@@ -9,7 +9,7 @@
 <div class="row" style="text-align:center; margin: 30px;">
 
   <div class=" col-xs-12 col-ms-6 col-md-6">
-    <%= image_tag @game.game_picture.url(:medium) %></p>
+    <%= image_tag @game.game_picture.url(:medium), style: "border: 1px solid black;" %></p>
   </div>
 
   <div class=" col-xs-12 col-ms-6 col-md-6">
@@ -19,7 +19,7 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row" style="margin: 0px;">
   <p class="col-xs-12 well col-ms-6 col-md-4"><b>Desenvolvedora:</b>
     <%= @game.developer %>
   </p>
@@ -32,8 +32,32 @@
     <%= @game.avaliable %>
   </p>
 
-  <p class="col-xs-12 well col-ms-6 col-md-4"><b>Foi aceito?  </b>
-    <%= "Em avaliação" if @game.accept == nil %>
+  <p class="col-xs-12 well col-ms-6 col-md-4"><b>Classificação indicativa:  </b>
+    <%= @game.classication %>
+  </p>
+
+  <p class="col-xs-12 well col-ms-6 col-md-4"><b>Multiplayer:  </b>
+    <%= @game.multiplayer %>
+  </p>
+
+  <p class="col-xs-12 well col-ms-6 col-md-4"><b>Co-op:  </b>
+    <%= @game.coop %>
+  </p>
+
+  <p class="col-xs-12 well col-ms-6 col-md-4"><b>Campanha:  </b>
+    <%= @game.campaign %>
+  </p>
+
+  <p class="col-xs-12 well col-ms-6 col-md-4"><b>Legendado em:  </b>
+    <%= @game.legend %>
+  </p>
+
+  <p class="col-xs-12 well col-ms-6 col-md-4"><b>Dublado em:  </b>
+    <%= @game.dubbing %>
+  </p>
+
+  <p class="col-xs-12 well col-ms-6 col-md-4"><b>Requirimentos:  </b>
+    <%= @game.requirements %>
   </p>
 
   <p class="col-xs-12 well col-ms-6 col-md-4"><b>Pontuação: </b>
@@ -51,7 +75,7 @@
   <%= show_new_review %>
 
 
-  <% @reviews.reverse.each do |review| %>
+  <% @reviews.last(10).each do |review| %>
       <div class="review">
         <b><%= User.find_by_id(review.id_user).name %>
         <small>Nota: <%= review.note %></small></b><br>

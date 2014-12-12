@@ -15,7 +15,8 @@ class Game < ActiveRecord::Base
 
   def description
     # "criado por: #{developer}"
-    [developer,gender,score].join(" - ")
+    "#{developer} - #{gender} - #{score} pontos"
+    
   end
 
 end

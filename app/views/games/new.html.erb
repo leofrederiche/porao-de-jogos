@@ -34,6 +34,35 @@
       <small>ex: PS3, PC, Xbox 360</small>
       <p><%= game.text_field :avaliable, class: "form-control" %></p>
 
+      <label for="inputPassword3" class="col-sm-2 control-label">Classificação indicativa</label>
+      <small>ex: 18</small>
+      <p><%= game.text_field :classication, class: "form-control" %></p>
+
+      <label for="inputPassword3" class="col-sm-2 control-label">Descrisão</label>
+      <small>Sem spoilers, apenas descrisão.</small>
+      <p><%= game.text_field :description, class: "form-control" %></p>
+
+      <label for="inputPassword3" class="col-sm-2 control-label">Multiplayer?</label>
+      <p><%= game.check_box :multiplayer, class: "form-control" %></p>
+    
+      <label for="inputPassword3" class="col-sm-2 control-label">Co-op?</label>
+      <p><%= game.check_box :coop, class: "form-control" %></p>
+
+      <label for="inputPassword3" class="col-sm-2 control-label">Campanha?</label>
+      <p><%= game.check_box :campaign, class: "form-control" %></p>
+    
+      <label for="inputPassword3" class="col-sm-2 control-label">Legendado nos idiomas:</label>
+      <small>ex: português, italiano</small>
+      <p><%= game.text_field :legend, class: "form-control" %></p>
+    
+      <label for="inputPassword3" class="col-sm-2 control-label">Dublado nos idiomas:</label>
+      <small>ex: português, italiano</small>
+      <p><%= game.text_field :dubbing, class: "form-control" %></p>
+      
+      <label for="inputPassword3" class="col-sm-2 control-label">Requirimentos minimos:</label>
+      <small>Seguindo pela ordem: Sistema operacional, processador, placa de video</small>
+      <p><%= game.text_field :requirements, class: "form-control" %></p>
+
       <p><%= game.submit "Cadastrar game", class: "btn btn-default" %></p>
     <% end %>
 

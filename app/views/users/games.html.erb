@@ -11,13 +11,16 @@
 </div>    
 
 <div class="container">
+<p>Seus jogos são aqueles do qual você mandou um review.</p>
+
 <div class="row" style="text-align: center;">
 
 <% @games.reverse.each do |game| %>
+<% game = Game.find_by_id(game.id_game  ) %>
 
   <div class="col-xs-12 col-sm-6 col-md-3" style="margin: -1px;" >
     <div class="thumbnail well" style="height: 400px; border-color: black;">
-      <%= image_tag game.game_picture.url %></p>
+      <%= image_tag game.game_picture.url, style: "width: 240px; height: 200px;" %></p>
       <div class="caption">
         <h3><%= game.name %></h3>
         <p><%= game.developer %> - <%= game.gender %></p>

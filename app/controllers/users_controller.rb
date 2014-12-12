@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   def games
     @user = User.find_by_name(params[:name])
-    @games = @user.games
+    @games = current_user.games
   end
 
   private
