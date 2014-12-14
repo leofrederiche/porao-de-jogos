@@ -1,5 +1,6 @@
 .well{
   border-color: rgba(0,0,0,0.4) !important;
+  background-image: linear-gradient(45deg, #F0F0F0, white, #F0F0F0);
 }
 
 .nav li:hover{
@@ -19,13 +20,17 @@
 }
 
 .game-card.gold{ 
-  background: linear-gradient(45deg,  rgba(242,215,12,1) 0%,rgba(255,255,255,1) 56%,rgba(252,235,0,1) 96%);
+  background: linear-gradient(45deg,  rgba(242,215,12,1) 0%,white 56%,rgba(252,235,0,1) 96%);
 }
 
 .game-card.silver{ 
-  background: linear-gradient(45deg,  rgba(160,160,160,1) 0%,rgba(232,232,232,1) 56%);
+  background: linear-gradient(45deg,  rgba(160,160,160,1) 0%,white 56%, rgba(160,160,160,1) 96%);
 }
 
 .game-card.bronze{ 
-  background: linear-gradient(45deg,  rgba(223,182,103,1) 0%,rgba(249,243,232,1) 56%,rgba(231,192,116,1) 96%);
+  background: linear-gradient(45deg,  rgba(223,182,103,1) 0%,white 56%,rgba(231,192,116,1) 96%);
+}
+
+.img-border{
+  border: 1px solid rgba(0,0,0,0.4) !important;
 }

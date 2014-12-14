@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141208011652) do
+ActiveRecord::Schema.define(version: 20141214033148) do
 
   create_table "games", force: true do |t|
     t.string   "name"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(version: 20141208011652) do
     t.string   "game_picture_content_type"
     t.integer  "game_picture_file_size"
     t.datetime "game_picture_updated_at"
+  end
+
+  create_table "quests", force: true do |t|
+    t.string   "name"
+    t.string   "objective"
+    t.string   "reward"
+    t.integer  "id_game"
+    t.string   "requirements"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "reviews", force: true do |t|

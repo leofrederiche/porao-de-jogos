@@ -2,7 +2,10 @@
 
 <div class="container bg-show-game" style="margin-top: 70px;">
 
-<h1 class="well"><%= @game.name %> <span class="label label-primary"><%= @game.gender %></span></h1>
+<h1 class="well">
+  <%= @game.name %> <span class="label label-primary"><%= @game.gender %></span>
+  <small style="float: right;"><%= link_to "Quests", quests_path(@game.id) %></small>
+</h1>
 
 <p style="postion: relative; text-align: center; margin-right: 20px;" >
 

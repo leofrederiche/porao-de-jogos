@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'index', media: 'all', 'data-turbolinks-track' => true %>
 
-<div class="jumbotron" >
+<div class="jumbotron" style="height: 100vh;">
   <h1>Porão de Jogos</h1>
   <p>A casa de todo conhecimento gamer.</p>
 </div>
@@ -18,11 +18,11 @@
         <div class=" col-xs-12 col-sm-6 col-md-6"> 
           <div class="well"> 
           <a class="media-left" href="#" style="margin: 40px;">
-            <%= image_tag game.game_picture.url(:medium), style: "width: 64px; height: 64px;" %></p>
+            <%= image_tag game.game_picture.url(:medium), style: "width: 64px; height: 64px;", class: "img-border" %></p>
           </a>
           <div class="media-body">
             <h4 class="media-heading"><%= game.name %> <small><%= game.gender %></small></h4>
-            <small><%= game.description.first(100) %></small>
+            <small><%= game.description.first(150) %></small>
           </div>
           </div>
         </div>

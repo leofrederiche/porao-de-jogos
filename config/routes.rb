@@ -18,4 +18,8 @@ Rails.application.routes.draw do
 
   post "/games/show/:name", to: "review#create", as: false
 
+  get "/games/quests/:id", to: "quests#index", as: :quests
+  get "/games/quests/new/:id", to: "quests#new", as: :new_quest
+  post "/games/quests/new/:id", to: "quests#create", as: false
+
 end
